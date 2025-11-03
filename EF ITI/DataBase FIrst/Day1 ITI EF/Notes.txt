@@ -1,0 +1,10 @@
+﻿//lazy loading: lma el object y7slo load mn el database m4 bn3ml loading l el
+navigation property m3ah ,, lakn el nav properties by7slha loading lma 
+tegy tst5dmha\
+
+//they should been a Virtual keyword in the definition
+of the nav property
+
+//example: you have a Department Class and it have nav property of Employee
+//then the nav property of employee should be as the following:
+publi c virtual Employee Employee {get;set;}
