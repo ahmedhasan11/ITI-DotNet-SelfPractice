@@ -1,0 +1,37 @@
+﻿//if you dont need only the Employee_ID && Project_ID in the Relation Table M-M between Employee-Project
+so you can let context make the Relation for you how???
+1- In Employee class:we made ICollection of Project
+2- In Project class: we made ICollection of Employees
+
+//what if you need to add an attribute to the M-M Relation Table???
+now you need to make a Class for that table by your hand
+1- Works_For Class have navigation Property of Employee && Project
+2- Employee class get nav ICollection<Works_for>
+3- Project class get nav ICollection<Works_for>
+
+//Last Note we will discuss
+
+//we did a relation between department and employee : 1 Employee work in 1 dept
+&& 1 dept can have many employees
+
+//what if we need to make anothr relation between department and employees too
+1- 1 Employee supervises 1 department
+2- 1 department can have many supervisors
+
+//elmo4kla hna en el context kan by3rf ezay en feh relation??
+1-3n tre2 eno byla2y gwa employee obj mn department
+2-w gwa el department Collection mn Employee
+3-kan 3arf en el FK elle gwa Employee by4awr 3la el Department
+
+//f el mo4kla hna en enta dlw2ty gwa Employee enta m3ak 2 obj mn Department
+
+//////////tyb hna el mo4kla en ezay el context hy3rf 
+1- ezay el collection bta3t employees(in Department class)
+dependent of el object elle esmo Dept (in Employee class)
+
+2- ezay el collection bta3t supervisors(in Department class)
+dependent of el object elle esmo SupervisedDept(in Employee class)
+
+//Solution?
+1-go above every collection in the Department class
+2- use attribute of [InverseProperty("obj name related in the Employee class")]
