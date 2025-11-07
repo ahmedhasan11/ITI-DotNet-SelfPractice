@@ -1,0 +1,12 @@
+﻿###in EF Core , by default lazy loading is disabled
+#there is 4 Solutions for this
+1-Eager Loading: w ana b query 3la el departments ht2olo b el bldy kda
+		w enta gy hat m3ak el employees
+
+mn akbr el m4akl f 7tt el eager loading en el query dlw2ty enta lw 3aml query f el eagetr loading
+enta el query beeg mn el database kber gdn 3shan enta 3aml kza incllude wra b3d
+f el query byfdl yt3mlo join join join f kda el performance ww7sh
+
+Solution????? enk tst5dm context.Departments.AsSplitQuery().include
+//AsSplitQuery ht5ly kol 7ga tt3ml lw7dha f el performance a7sn
+

@@ -1,0 +1,18 @@
+﻿#EF6
+kan 3ndk lma bt3ml add-migration , da mby3dl4 f el snapshot
+ela lma bt3ml update-database , f sa3tha lw enta 3mlt 7aga
+8lt f el migration bt2om mas7 el file bta3el migration
+w wla k2n 7sl 7aga
+
+#EF Core
+dlw2ty enta lma t3ml add-migration da by3dl el snapshot bta3tk 7alyn
+bs m4 hy3dl felDB ela lma t3ml update-database
+//tb lw 3mlt 7aga 8ltf el migration w 3ayz ams7ha , lw enta ms7t
+elfile htkon 3mlt mo4kla 3shan el snapshot et3dlt
+///////solution: feh command momkn tktbo f el PM Console
+Remove-Migration : this command deletes the latest migration file
+and returns the snapshot a step back
+
+##############IMPORTANT : remove-migration works if you didnt make 
+the update-database command
+

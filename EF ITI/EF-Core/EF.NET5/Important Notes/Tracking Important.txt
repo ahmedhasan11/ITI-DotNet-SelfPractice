@@ -1,0 +1,20 @@
+﻿el NoTracking a7yann btsbb m4akl lma tst5dmha m3 el include
+
+//when you use AsNoTracking method so you are just reading data only
+//so it's a read only process
+
+//in brief,, you are telling the context that every employee make for him obj from department
+
+//what if there was 100 employee works in same department??
+
+//the context here will make 100 object from department for these 100 employee
+
+//so memory is deaddddddddddddddddd here
+
+######Solution>>>>>>>>>>>>>> AsNoTrackingWithIdentityResolution()
+
+//hna b2a lma el context eegy y load el object bta3 department hy4of hwa already 3mlo
+load 2bl kda wla la ,,,, f kda ma dam el 100 employee works at same department 
+,,so the 100 employee goes to the same object of department
+
+>>>>>>>so the context will for the 100 employee will make only 1 object for department 

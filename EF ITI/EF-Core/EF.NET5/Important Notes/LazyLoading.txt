@@ -1,0 +1,6 @@
+﻿1-Install Package EntityFrameWorkCore.Proxies
+
+2-all navigration properties make them Virtual
+
+3-go to Context class and go on the Onconfigure method 
+and type this >>>>>>>>>>  optionsBuilder.UseLazyLoadingProxies(true)

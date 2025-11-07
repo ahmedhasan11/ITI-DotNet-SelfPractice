@@ -1,0 +1,12 @@
+﻿//Here we will learn .NET Core 
+##we need to add 3 Packages
+1-EntityframeworkCore
+2-EntityframeworkCore.Sqlserver (or whatever database provider you will use)
+3-EntityframeworkCore.Tools
+#################################################################################
+
+//b3d kda 3ayzen ndelo el connection string , fel EF Core m4 hdehalo f el Base("")
+lakn hdelo el connection string gwa el method elle esmha on configuring
+##after that we go configure in Context class 
+//we will override the method called onConfiguring 
+//optionsbuilder.UseSqlServer("ConnectionString")

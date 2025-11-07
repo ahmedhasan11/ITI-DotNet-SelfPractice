@@ -1,0 +1,11 @@
+﻿//Explicit loading 3bara 3n eny btlob mn el context eno y load el collection aw el object
+
+//Explicit Loading of collection of employees
+context.Entry(dept).Collection(d => d.Employees).Load();
+
+
+//Explicit Loading of object of Branch
+context.Entry(dept).Reference(d => d.Branch).Load();
+
+//assume that you want to make a where condition
+var emps = context.Entry(dept).Collection(d => d.Employees).Query().Where(e => e.ID < 10)
