@@ -1,0 +1,27 @@
+﻿(*)PROBLEM||
+-----------
+when you try to execute any endpoint that have [Authorize] , the default authentication
+middleware work based on cookie even if you are in api project , so the default
+middleware checks if there is cookie your browser provided , if there was no cookie
+,,the middleware redirects you to account/login
+								----------------------------------------
+(*)SOLUTION||
+------------
+1- in the IOC container , builder.services.addauthentication()
+2-here you have to do 2 things , 
+first one : for the cookie problem
+secnd one: for the reirecting to account/login problem
+
+FIRST--> options.DefaultAuthenticationScheme   -->for the cookie problem
+SECOND--> options.DefaultChallengeScheme       -->for the reirecting to account/login problem
+
+builder.services.addauthentication(options=>{
+
+	//work based on jwt not cookie
+	options.DefaultAuthenticationScheme= JwtBearerDefaults.AuthenticationScheme;
+
+	//return unauthorized if there is no jwt token
+	options.DefaultChallengeScheme= JwtBearerDefaults.AuthenticationScheme;
+})
+
+
